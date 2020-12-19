@@ -13,7 +13,7 @@ def fetch_weather(city):
 	try:
 	    url='http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+apikey+'&units=metric'
 	    f=urllib.request.urlopen(url)
-	    mydata=f.fread()
+	    mydata=f.read()
 	except Exception as e:
 	    print('Error in finding temperature. \n '+str(e))
 	    exit(-1)
