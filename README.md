@@ -1,4 +1,4 @@
-# ForWeather
+# ForWeather ![Python application](https://github.com/DreamPearl/ForWeather/workflows/Python%20application/badge.svg)
 Application to display weather report
 
 ### Usage
