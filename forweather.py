@@ -10,7 +10,7 @@ def take_input():
 
 def fetch_weather(city):
 	try:
-		apikey=os.environ['OPENWEATHER_API']
+		apikey=os.environ['OPENWEATHER_API_KEY']
 	except KeyError:
 		from api import apikey
 	try:
