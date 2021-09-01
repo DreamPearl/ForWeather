@@ -1,7 +1,7 @@
 import urllib.request
 import urllib.parse
 import json
-import os
+from api import _getapikey
 
 def take_input():
 	city=input('Please Enter City Name: ').strip()
@@ -9,10 +9,7 @@ def take_input():
 	return en_city
 
 def fetch_weather(city):
-	try:
-		apikey=os.environ['OPENWEATHER_API_KEY']
-	except KeyError:
-		from api import apikey
+	apikey=_getapikey()
 	try:
 	    url='http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+apikey+'&units=metric'
 	    f=urllib.request.urlopen(url)
