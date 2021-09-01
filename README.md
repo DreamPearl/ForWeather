@@ -11,3 +11,6 @@ Application to display weather report
 - If want to pass API key using environment variable at runtime: 
     - run  `OPENWEATHER_API='<Enter your api key here>' python3 forweather.py` 
 - Enjoy the application :)
+
+### Docker
+- $ docker run --name forweather -i forweather:1.0
