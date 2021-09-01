@@ -1,4 +1,9 @@
-FROM python:3
-ADD . /app
+FROM ubuntu:latest
 
-# CMD [ "python", "./forweather.py" ]
+COPY . /app
+
+RUN apt-get update -y && apt-get install -y python3-pip python-dev
+
+WORKDIR /
+
+CMD [ "python3", "/app/forweather.py" ]

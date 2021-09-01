@@ -6,5 +6,5 @@ def _getapikey():
     try:
         apikey=os.environ['OPENWEATHER_API_KEY']
     except KeyError:
-        apikey='<Enter your api key here>'
+        apikey='60196c37f5a29d2f98931642c7eedb6a'
     return apikey
