@@ -3,10 +3,10 @@ import urllib.parse
 import json
 from api import _getapikey
 
-# def take_input():
-# 	city=input('Please Enter City Name: ').strip()
-# 	en_city=urllib.parse.quote(city)
-# 	return en_city
+def take_input():
+	city=input('Please Enter City Name: ').strip()
+	en_city=urllib.parse.quote(city)
+	return en_city
 
 def fetch_weather(city):
 	apikey=_getapikey()
@@ -26,8 +26,7 @@ def print_weather(data,city):
 	print('The temperature in '+city+' is '+str(weather_temp))
 
 def main():
-	# city=take_input()
-	city='Aligarh'
+	city=take_input()
 	data=fetch_weather(city)
 	print_weather(data,city)
 
