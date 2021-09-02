@@ -1,16 +1,26 @@
 # ForWeather ![Python application](https://github.com/DreamPearl/ForWeather/workflows/Python%20application/badge.svg)
 Application to display weather report
 
-### Usage
+### Usage 1 [Git clone]:
 - Clone the repository.
    - `git clone https://github.com/DreamPearl/ForWeather.git`
-   - `cd ForWeather` 
-- If want to use hardcoded API key written in api.py: 
-    - Edit api key within file name `api.py` 
-    - run  `python3 ForWeather.py` 
-- If want to pass API key using environment variable at runtime: 
-    - run  `OPENWEATHER_API='<Enter your api key here>' python3 forweather.py` 
-- Enjoy the application :)
 
-### Docker
-- $ docker run --name forweather -i forweather:1.0
+   - `cd ForWeather` 
+- Build docker image. 
+   - `docker build --tag forweather:1.0 .` 
+
+- Run docker image. 
+   - `docker run --name forweather -i -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0` 
+   Or edit api key within file name `api.py`
+   - `docker run --name forweather -i forweather:1.0`
+ 
+
+### Usage 2 [Pull docker image]:
+- Pull docker image. 
+    - `docker pull dreampearl/forweather:1.0` 
+
+- Run docker image. 
+    - `docker run --name forweather -i -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0` 
+
+
+- Enjoy the application :)
