@@ -40,5 +40,6 @@ jobs:
       run: |
         docker build --tag dreampearl/forweather:1.0 .
     - name: Docker Push
+      if: ${{github.event_name=='push'}}
       run: |
         docker push dreampearl/forweather:1.0
