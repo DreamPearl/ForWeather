@@ -10,8 +10,8 @@ Application to display weather report
    - `docker build --tag forweather:1.0 .` 
 
 - Run docker image. 
-   - `docker run --name forweather -i -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0` 
-   Or edit api key within file name `api.py`
+   - `docker run --name forweather -i -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0`  
+   Or edit api key within file name `api.py` 
    - `docker run --name forweather -i forweather:1.0`
  
 
