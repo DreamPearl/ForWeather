@@ -11,7 +11,9 @@ Application to display weather report
 
 - Run docker image. 
    - `docker run --name forweather -i -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0`  
-   Or edit api key within file name `api.py` 
+
+   OR (edit api key within file name api.py)
+
    - `docker run --name forweather -i forweather:1.0`
  
 
@@ -23,4 +25,4 @@ Application to display weather report
     - `docker run --name forweather -i -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0` 
 
 
-- Enjoy the application :)
+#### Enjoy the application :)
