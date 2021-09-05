@@ -1,5 +1,8 @@
 # ForWeather ![Python application](https://github.com/DreamPearl/ForWeather/workflows/Python%20application/badge.svg)
-Application to display weather report
+
+### Application to display weather report
+
+#### Please find api keys from https://home.openweathermap.org/api_keys
 
 ### Usage 1 [Git clone]:
 - Clone the repository.
