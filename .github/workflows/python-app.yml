@@ -40,5 +40,5 @@ jobs:
     - name: Tag Docker image and Docker Push
       if: ${{github.event_name=='push'}}
       run: |
-        docker --tag forweather:1.0 dreampearl/forweather:1.0
+        docker tag forweather:1.0  dreampearl/forweather:1.0
         docker push dreampearl/forweather:1.0
