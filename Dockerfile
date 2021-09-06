@@ -1,9 +1,9 @@
-FROM ubuntu:latest
+FROM python:latest
 
 COPY . /app
 
-RUN apt-get update -y && apt-get install -y python3-pip python-dev
+RUN pip install Flask
 
-WORKDIR /
+WORKDIR /app
 
-CMD [ "python3", "/app/forweather.py" ]
+CMD [ "python3", "forweather.py" ]

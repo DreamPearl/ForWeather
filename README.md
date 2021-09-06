@@ -13,11 +13,15 @@
    - `docker build --tag forweather:1.0 .` 
 
 - Run docker image. 
-   - `docker run --name forweather -i -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0`  
+   - `docker run -p 5000:5000 -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0`  
 
    OR (edit api key within file name api.py)
 
-   - `docker run --name forweather -i forweather:1.0`
+   - `docker run -p 5000:5000 forweather:1.0`
+
+- To run unit test inside container.
+   - `docker run forweather:1.0 sh -c "python3 test_forweather.py"`
+
  
 
 ### Usage 2 [Pull docker image]:
@@ -25,7 +29,10 @@
     - `docker pull dreampearl/forweather:1.0` 
 
 - Run docker image. 
-    - `docker run --name forweather -i -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0` 
+    - `docker run --name forweather -p 5000:5000 -e OPENWEATHER_API_KEY='<Enter your api key here>' forweather:1.0` 
+
+- To run unit test inside container.
+   - `docker run forweather:1.0 sh -c "python3 test_forweather.py"`
 
 
 #### Enjoy the application :)
