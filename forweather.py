@@ -2,8 +2,12 @@ import urllib.request
 import urllib.parse
 import json
 from api import _getapikey
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, render_template
 app = Flask(__name__)
+
+@app.route('/')
+def load_home_page():
+    return render_template('city.html')
 
 @app.route('/city',methods = ['POST', 'GET'])
 def take_input():
@@ -34,5 +38,5 @@ def get_city_temp(city):
     return weather_temp
    
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0")
     
