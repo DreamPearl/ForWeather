@@ -8,25 +8,17 @@ class FakeWeather():
     def read(self):
         return FAKE_DATA
 
-def fake_input(a):
-    return 'Delhi'
-
 def fake_urlopen(a):
     obj=FakeWeather()
     return obj
 
 class TestForWeather(unittest.TestCase):
 
-    @patch('builtins.input', fake_input)
-    def test_take_input(self):
-        got_city=forweather.take_input()
-        self.assertEqual(got_city,'Delhi')
-
     @patch('urllib.request.urlopen', fake_urlopen)
-    def test_fetch_weather(self):
+    def test_get_city_temp(self):
         city='Aligarh'
-        got_data=forweather.fetch_weather(city)
-        self.assertEqual(got_data,FAKE_DATA)
+        got_temp=forweather.get_city_temp(city)
+        self.assertEqual(got_temp,16.32)
 
 if __name__ == '__main__':
     unittest.main()
