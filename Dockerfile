@@ -4,6 +4,6 @@ COPY . /app
 
 RUN pip install Flask
 
-WORKDIR /
+WORKDIR /app
 
-CMD [ "python3", "/app/forweather.py" ]
+CMD [ "python3", "forweather.py" ]
