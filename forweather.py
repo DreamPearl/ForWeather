@@ -16,6 +16,10 @@ def take_input():
 
 @app.route('/success/<city>')
 def success(city):
+    weather_temp=get_city_temp(city)
+    return 'Temperature of %s is %s' % (city, weather_temp)
+
+def get_city_temp(city):
     apikey=_getapikey()
     en_city=urllib.parse.quote(city)
     try:
@@ -27,7 +31,7 @@ def success(city):
         exit(-1)
     y=json.loads(mydata)
     weather_temp=y['main']['temp']
-    return 'Temperature of %s is %s' % (city, weather_temp)
+    return weather_temp
    
 if __name__ == '__main__':
     app.run()
